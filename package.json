@@ -1,0 +1,45 @@
+{
+  "name": "@peassoft/http-shutdown",
+  "version": "1.0.0",
+  "description": "Graceful shutdown of a Node.js HTTP server",
+  "type": "module",
+  "exports": "./dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "author": {
+    "name": "Alexey Gorokhov",
+    "email": "alexey.gorokhov@icloud.com"
+  },
+  "license": "MIT",
+  "keywords": [
+    "http",
+    "shutdown",
+    "gracefull"
+  ],
+  "homepage": "https://github.com/peassoft/http-shutdown",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/peassoft/http-shutdown.git"
+  },
+  "bugs": {
+    "url": "https://github.com/peassoft/http-shutdown/issues"
+  },
+  "scripts": {
+    "test": "package-json-validator-cli && eslint ./ && npm run tsc && vitest run",
+    "tsc": "tsc --noEmit",
+    "build": "del-cli dist && tsc -p tsconfig-build.json && api-extractor run --local --verbose"
+  },
+  "devDependencies": {
+    "@memnrev/eslint-v9-config": "^0.4.0",
+    "@microsoft/api-extractor": "^7.58.7",
+    "@total-typescript/ts-reset": "^0.6.1",
+    "@types/node": "^24.12.4",
+    "del-cli": "^7.0.0",
+    "eslint": "^9.39.4",
+    "package-json-validator-cli": "^0.1.11",
+    "tsx": "^4.22.3",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.5"
+  }
+}
