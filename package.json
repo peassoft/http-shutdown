@@ -7,6 +7,9 @@
   "files": [
     "dist"
   ],
+  "engines": {
+    "node": ">=24"
+  },
   "author": {
     "name": "Alexey Gorokhov",
     "email": "alexey.gorokhov@icloud.com"
