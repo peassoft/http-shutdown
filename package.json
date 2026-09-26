@@ -29,20 +29,23 @@
     "url": "https://github.com/peassoft/http-shutdown/issues"
   },
   "scripts": {
-    "test": "package-json-validator-cli && eslint ./ && npm run tsc && vitest run",
+    "test": "package-json-validator-cli && oxlint && npm run tsc && vitest run",
     "tsc": "tsc --noEmit",
     "build": "del-cli dist && tsc -p tsconfig-build.json && api-extractor run --local --verbose"
   },
   "devDependencies": {
-    "@memnrev/eslint-v9-config": "^0.4.0",
     "@microsoft/api-extractor": "^7.58.7",
+    "@peassoft/linter": "^1.0.1",
     "@total-typescript/ts-reset": "^0.6.1",
     "@types/node": "^24.12.4",
     "del-cli": "^7.0.0",
-    "eslint": "^9.39.4",
     "package-json-validator-cli": "^0.1.11",
     "tsx": "^4.22.3",
     "typescript": "^6.0.3",
     "vitest": "^4.1.5"
+  },
+  "allowScripts": {
+    "fsevents": true,
+    "esbuild": true
   }
 }
