@@ -1,0 +1,40 @@
+Node.js Classes for HTTP Servers
+================================
+
+net.Server
+==========
+
+Events
+------
+
+• close() - not emitted until all connections are ended.
+
+• connection(socket: net.Socket) - new connection is made.
+
+• error(err: Error) - ! note about "close" event.
+
+• listening() - after calling "server.listen()".
+
+• drop(data) - note "Server.maxConnections".
+
+Methods
+-------
+
+• close(cb) - it's an async funcion.
+
+• listen()
+
+
+http.Server
+===========
+
+Events
+------
+
+• clientError
+
+• close <- net.Server (?)
+
+• connection(socket: stream.Duplex) (!!)
+
+• request(req, res)
