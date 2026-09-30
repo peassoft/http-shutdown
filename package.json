@@ -42,7 +42,7 @@
     "package-json-validator-cli": "^0.1.11",
     "tsx": "^4.22.3",
     "typescript": "^6.0.3",
-    "vitest": "^4.1.5"
+    "vitest": "^5.0.2"
   },
   "allowScripts": {
     "fsevents": true,
